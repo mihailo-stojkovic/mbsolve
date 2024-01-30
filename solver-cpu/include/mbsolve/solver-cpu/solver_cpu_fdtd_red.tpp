@@ -508,7 +508,7 @@ solver_cpu_fdtd_red<num_lvl, density_algo>::run() const
 
                         //#pragma omp simd
                         //for (uint64_t i = OL; i < chunk + OL; i++) {
-                        //    int64_t idx = base_idx + i;
+                        int64_t idx = base_idx;
                         if ((idx >= pos) && (idx < pos + cols)) {
                             if (t == record::type::electric) {
                                 m_result_scratch[off_r] = t_e[0];
